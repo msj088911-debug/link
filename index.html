@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>23우주 스마트스토어 이동 중...</title>
+  <script>
+    const webUrl = "https://smartstore.naver.com/23universe/products/11789693513";
+    const appUrl = "naversearchapp://inappbrowser?url=" + encodeURIComponent(webUrl) + "&target=new&version=6";
+    const ua = navigator.userAgent.toLowerCase();
+
+    if (/iphone|ipad|ipod|android/.test(ua)) {
+      window.location.href = appUrl;
+      setTimeout(function() {
+        window.location.replace(webUrl);
+      }, 1500);
+    } else {
+      window.location.replace(webUrl);
+    }
+  </script>
+</head>
+<body></body>
+</html>
